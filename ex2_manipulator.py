@@ -6,7 +6,7 @@ import os
 xml_path = 'ex2_manipulator.xml' #xml file (assumes this is in the same folder as this file)
 simend = 20 #simulation time
 ##1
-print_camera_config = 0 #set to 1 to print camera config
+print_camera_config = 0  #set to 1 to print camera config
                         #this is useful for initializing view of the model)
 
 # For callback functions

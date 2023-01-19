@@ -3,8 +3,8 @@ from mujoco.glfw import glfw
 import numpy as np
 import os
 
-xml_path = 'ex2_manipulator.xml' #xml file (assumes this is in the same folder as this file)
-simend = 5 #simulation time
+xml_path = 'humanoid.xml' #xml file (assumes this is in the same folder as this file)
+simend = 50 #simulation time
 print_camera_config = 0 #set to 1 to print camera config
                         #this is useful for initializing view of the model)
 
@@ -103,6 +103,10 @@ model = mj.MjModel.from_xml_path(xml_path)  # MuJoCo model
 data = mj.MjData(model)                # MuJoCo data
 cam = mj.MjvCamera()                        # Abstract camera
 opt = mj.MjvOption()                        # visualization options
+
+#####################################
+print(data)
+
 
 # Init GLFW, create window, make OpenGL context current, request v-sync
 glfw.init()
